@@ -1,0 +1,30 @@
+#!/bin/python3
+#Omer Mirghni
+#3/19/2020
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the viralAdvertising function below.
+def viralAdvertising(n):
+    like=0
+    sum=0
+    share=5
+    for i in range(n):
+        like=(share//2)
+        share=3*like
+        sum+=like
+    return(sum)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    result = viralAdvertising(n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()

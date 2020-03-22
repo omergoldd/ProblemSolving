@@ -1,0 +1,43 @@
+#!/bin/python3
+#By Omer Mirghani
+#22/3/2020
+#Corona Pandemic
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the jumpingOnClouds function below.
+def jumpingOnClouds(c, k):
+    l=len(c)
+    n=0
+    count=0
+    count2=0
+    while(n%(l) !=0 or n==0):
+      if(c[n%l]==1):
+        print(c[n%l],'\n')
+        count2+=2
+      n+=k
+      count+=1
+    return(100-(count+count2))
+
+   # print(n,count,'\n')
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nk = input().split()
+
+    n = int(nk[0])
+
+    k = int(nk[1])
+
+    c = list(map(int, input().rstrip().split()))
+
+    result = jumpingOnClouds(c, k)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()

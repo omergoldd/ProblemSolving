@@ -1,0 +1,21 @@
+#!/bin/python3
+#BY  OMer Mirghani
+#22/3/2020
+#Corona Pandemic
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the extraLongFactorials function below.
+def extraLongFactorials(n):
+    x=1
+    for i in range (0,n):
+        x = x*(i+1)
+    print(x)
+
+if __name__ == '__main__':
+    n = int(input())
+
+    extraLongFactorials(n)

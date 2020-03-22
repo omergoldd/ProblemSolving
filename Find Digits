@@ -1,0 +1,32 @@
+#!/bin/python3
+#BY Omer Mirghani
+#Corona Pandemic
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the findDigits function below.
+def findDigits(n):
+    count=0
+    for f in str(n):
+       # print(f)
+        if (f!='0' and n%int(f)==0):
+            count+=1
+        print(count,'\n')
+    return(count)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        n = int(input())
+
+        result = findDigits(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
